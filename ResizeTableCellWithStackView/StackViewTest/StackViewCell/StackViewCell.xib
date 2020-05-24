@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="StackViewCell" rowHeight="125" id="oa6-1S-dJi" customClass="StackViewCell" customModule="StackViewTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="573" height="125"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oa6-1S-dJi" id="ShT-Ek-71R">
+                <rect key="frame" x="0.0" y="0.0" width="573" height="125"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RV4-s8-uR8">
+                        <rect key="frame" x="0.0" y="0.0" width="573" height="125"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gkl-eF-9OW" customClass="SampleChildStackView" customModule="StackViewTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="573" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="potato" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lbs-h5-uyO">
+                                <rect key="frame" x="0.0" y="50" width="573" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNk-7u-2rL">
+                                <rect key="frame" x="0.0" y="104" width="573" height="0.0"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="573" placeholderIntrinsicHeight="21" translatesAutoresizingMaskIntoConstraints="NO" id="iWT-q5-yVN" customClass="SampleChildStackView" customModule="StackViewTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="104" width="573" height="21"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VNk-7u-2rL" firstAttribute="leading" secondItem="RV4-s8-uR8" secondAttribute="leading" id="7sw-M2-YZR"/>
+                            <constraint firstAttribute="trailing" secondItem="VNk-7u-2rL" secondAttribute="trailing" id="PLW-Px-cXB"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="RV4-s8-uR8" secondAttribute="trailing" id="GKe-9K-kIC"/>
+                    <constraint firstItem="RV4-s8-uR8" firstAttribute="leading" secondItem="ShT-Ek-71R" secondAttribute="leading" id="N5y-qP-ST0"/>
+                    <constraint firstAttribute="bottom" secondItem="RV4-s8-uR8" secondAttribute="bottom" id="OQL-ax-hfs"/>
+                    <constraint firstItem="RV4-s8-uR8" firstAttribute="top" secondItem="ShT-Ek-71R" secondAttribute="top" id="n7q-UB-H48"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="1" green="0.93535766990000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <connections>
+                <outlet property="bottomStackView" destination="iWT-q5-yVN" id="27b-Hg-IRM"/>
+                <outlet property="contentStackView" destination="RV4-s8-uR8" id="SmI-OZ-y3g"/>
+                <outlet property="nameLabel" destination="VNk-7u-2rL" id="JJ7-jv-UdJ"/>
+                <outlet property="sampleTextFields" destination="Lbs-h5-uyO" id="I06-5j-RdB"/>
+                <outlet property="topStackView" destination="Gkl-eF-9OW" id="Qq4-su-Iag"/>
+            </connections>
+            <point key="canvasLocation" x="254.34782608695653" y="165.06696428571428"/>
+        </tableViewCell>
+    </objects>
+</document>
