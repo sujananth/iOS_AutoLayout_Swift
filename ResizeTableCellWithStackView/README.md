@@ -1,4 +1,4 @@
-# Automatically Resizing table view cell as per the stack view height inside it.
+# AutoLayout Resizing table view cell as per the stack view height inside it.
 
 
 ![pop](Demo/Resizing_TableViewCell_Demo.gif)
@@ -21,5 +21,16 @@ Whats Done in the Project:
 
 ![pop](Demo/Placeholder.png)
 
+
+>For custom TableViewCell created using Xib, the class file name is set for the actual TableViewCell withing Xib and added Identifier in the storyboard. and cell is registered using below code.
+let nib = UINib(nibName: "StackViewCell", bundle: nil)
+tableView.register(nib, forCellReuseIdentifier: "StackViewCell")
+
+![pop](Demo/ClassForTableViewCell.png)
+
+>For cutom UIView created using Xib, the class file name is set for the FileOwner.  In our example SampleChildStackView is UIView. 
+![pop](Demo/Code1.png)
+![pop](Demo/Code2.png)
+![pop](Demo/ClassForUIView.png)
 
 
