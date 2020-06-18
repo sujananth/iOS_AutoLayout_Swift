@@ -1,4 +1,4 @@
-# AutoLayout Resizing table view cell as per the stack view height inside it.
+# AutoLayout - Resizing TableViewCell automatically from the hierarchy of stack view within it.
 
 
 ![pop](Demo/Resizing_TableViewCell_Demo.gif)
